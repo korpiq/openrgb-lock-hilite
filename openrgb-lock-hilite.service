@@ -1,0 +1,11 @@
+[Unit]
+Description=Highlight active keyboard locks through OpenRGB
+After=openrgb.service
+Requires=openrgb.service
+
+[Service]
+ExecStart=@PYTHON@ @SCRIPT@
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
